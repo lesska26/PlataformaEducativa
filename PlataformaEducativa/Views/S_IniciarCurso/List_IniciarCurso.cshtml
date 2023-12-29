@@ -1,0 +1,46 @@
+﻿@model List<PlataformaEducativa.Models.Instituciones>
+@{
+    ViewData["Title"] = "List_IniciarCurso";
+}
+
+<h1>Curso Iniciados</h1>
+
+<div>
+    <select class="form-select" id="selectCentros">
+        <option value="0">Seleccione un Centro</option>
+        @foreach(var i in Model)
+        {
+            <option value="@i.InstitucionesId">
+                @i.Nombre
+            </option>
+        }
+    </select>
+</div>
+<div>
+    <div class="tb-header">
+        <p class="tb-title">Centro</p>
+        <p class="tb-title">Curso</p>
+        <p class="tb-title">Estudiantes</p>
+        <p class="tb-title">Facilitador</p>
+        <p class="tb-title ultimo">F_Inicia</p>
+
+    </div>
+</div>
+<script>
+
+    let buscar = document.getElementById("selectCentros");
+    buscar.addEventListener("change", e => {
+
+        if (e.target.value != 0) {
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", `/S_IniciarCurso/L_Curso_I?id=${e.target.value}`);
+            xhr.addEventListener("load", () => {
+                console.log(xhr.response);
+            });
+            xhr.send();
+        }
+        
+    });
+
+    
+</script>

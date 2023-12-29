@@ -1,0 +1,46 @@
+﻿@model List<Estudiantes>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table table-striped">
+    <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Sexo</th>
+        <th>Opciones</th>
+    </tr>
+    @foreach(var  i in Model)
+    {
+        <tr>
+            <td>@i.Nombre</td>
+            <td>
+                @{
+                    int edad = DateTime.Now.Year - i.FechaDeNacimiento.Year;
+                   
+                }
+                @{
+                    @edad;
+                }
+            </td>
+            <td>
+                @{
+
+
+                    string Sexo = @i.Genero == 'H' ? "Hombre" : "Mujer";
+                    
+                }
+                @{
+
+                    @Sexo
+                    ;
+                }
+            </td>
+            <td>
+                <a asp-controller="Estudiantes" asp-action="Edit" class="btn btn-danger" asp-route-id="@i.EstudiantesId">Editar</a>
+            </td>
+        </tr>
+    }
+</table>

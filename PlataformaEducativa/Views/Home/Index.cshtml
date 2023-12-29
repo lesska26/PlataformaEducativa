@@ -2,7 +2,84 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center" style="display:none">
+    <h1 class="display-4">Bienvenido-@User.Identity.Name</h1>
+    <img class="desactivo activo"  src="~/img/descarga.png" width="300" height="300" id="imagen" style="border-radius: 50%;" />
 </div>
+
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+
+       
+       const ctx = document.getElementById('myChart');
+        function datosGraficos() {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "/Grafico/CentroGrafico");
+            xhr.addEventListener("load", () => {
+                console.log(xhr.response);
+                let json = JSON.parse(xhr.response);
+                let centro = [];
+                let cantidad = [];
+                json.forEach(cen => {
+                    centro.push(cen.centro);
+                    cantidad.push(cen.cant);
+                })
+                Grafico(centro,cantidad);
+            });
+            xhr.send();
+        };
+
+        datosGraficos();
+
+        function Grafico(ArrayNombre,arrayData) {
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels:ArrayNombre, //['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# Cantidad de Empleado',
+                        data: arrayData,//[12, 19, 3, 5, 2, 3],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            
+
+        }
+        
+
+    })
+
+
+    // document.addEventListener("DOMContentLoaded", e => {
+    //     let num = 1;
+    //     setInterval(() => {
+           
+
+    //        console.log(num)
+    //         num++;
+    //         document.getElementById("imagen").classList.replace("activo", "desactivo");
+    //         setTimeout(() => {
+    //             document.getElementById("imagen").classList.replace("desactivo", "activo");
+    //         },1000)
+            
+           
+    //     },2000)
+    // })
+</script>

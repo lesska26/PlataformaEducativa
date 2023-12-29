@@ -1,0 +1,33 @@
+﻿@model PlataformaEducativa.Models.ModelsView.Agregar_M;
+@{
+    ViewData["Title"] = "A_S_M";
+}
+
+<h1>Agregar o Quitar Materia</h1>
+
+<div>
+    <div>
+        <input type="hidden"  id="profesorId" value="@Model.Usuario.UsuarioId" />
+        <input type="tex" readonly value="@Model.Usuario.Nombre" />
+    </div>
+    <div id="Materia">
+        <p>Tus Materias</p>
+        @foreach(var i in Model.TusMaterias)
+        {
+            <label>@i.CursosName</label>
+            <input type="checkbox" value="@i.CursosId" checked>
+        }
+    </div>
+    <div id="otros">
+        <p>Agregar Materias</p>
+        @foreach(var i in Model.AgragarMaterias)
+        {
+            <label>@i.CursosName</label>
+            <input type="checkbox" value="@i.CursosId">
+        }
+    </div>
+    <div>
+        <button class="btn btn-success" id="Actualizar">Actualizar</button>
+    </div>
+</div>
+<script src="~/js/UpdateProfect.js"></script>

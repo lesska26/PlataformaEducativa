@@ -13,26 +13,18 @@ namespace PlataformaEducativa.Models
 
         [Required]
         public int IniciarCursoId { get; set; }
-
-        [ForeignKey("UsuarioId")]
-        public Usuario Usuario { get; set; }
-
-        [Required]
-        public int UsuarioId { get; set; }
-        [ForeignKey("EstudianteId")]
+        [ForeignKey("EstudiantesId")]
         public Estudiantes Estudiantes { get; set;}
         [Required]
         public int EstudiantesId { get;set; }
-        [ForeignKey("MateriaId")]
-        public Materia Materia { get; set; }
 
-        [Required]
-
-        public int MateriaId { get; set; }
         [Required]
         public float Nota { get; set; }
 
         public DateTime Fecha { get; set; }
+
+        public char? Status { get; set; } 
+       
 
 
 

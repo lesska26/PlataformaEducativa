@@ -1,0 +1,87 @@
+﻿@model List<PlataformaEducativa.Models.ModelsView.ListUsuarioView>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div>
+    <form asp-controller="Usuario" asp-action="BuscarProfCentros" method="get">
+
+
+   <select style="display:none" id="selectBusq" class="form-select">
+       <option>Selecione un Metodo de Busqueda</option>
+        <option>Cedula</option>
+        <option>Nombre</option>
+   </select>
+   <select class="form-select" id="selectInstBusq">
+       <option>Selecione un Instituto</option>
+   </select>
+   <div style="display:flex">
+       <input type="text" class="form-control" placeholder="Buscar Profesor" />
+       <button type="submit" class="btn btn-danger">Buscar</button>
+   </div>
+</form>
+</div>
+<table class="table table-hover">
+ <tr>
+     <th>
+         Nombre
+     </th>
+     <th>
+         Materias
+     </th>
+     <th>Centros</th>
+    <th>
+        Opciones
+    </th>
+ </tr>
+    @foreach(var i in Model)
+    {
+        <tr>
+            <td>
+                @i.ProfesorName
+            </td>
+            <td>
+                @foreach(var f in i.Materia)
+                {
+                    @f.CursosName<br /> 
+                    
+                }
+            </td>
+            <td>
+                @i.Centros
+            </td>
+            <td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <a class="btn btn-success" asp-action="AsignarMateria" asp-controller="Usuario" asp-route-ProfesorName="@i.ProfesorName" asp-route-ProfesorId="@i.ProfesorId">Añadir Materia</a>
+                    <a class="btn btn-primary">Update</a>
+                }
+               
+            </td>
+        </tr>
+    }
+</table>
+<div>
+    @{
+        double cantidad = @ViewBag.cantidad;
+        double pagina = Math.Ceiling(cantidad / 10);
+
+    }
+    @if (@ViewData["centros"] == null)
+    {
+        @for (int i = 1; i <= pagina; i++)
+        {
+            <a asp-action="VerProfesor" asp-controller="Usuario" asp-route-pg="@i" class="btn btn-danger">@i</a>
+        }
+
+    }
+    else
+    {
+        @for (int i = 1; i <= pagina; i++)
+        {
+            <a asp-action="BuscarProfCentros" asp-controller="Usuario" asp-route-pg="@i" asp-route-id="" class="btn btn-danger">@i</a>
+        }
+    }
+
+</div>

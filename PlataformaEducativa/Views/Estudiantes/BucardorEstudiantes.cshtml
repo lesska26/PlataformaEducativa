@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="divBuscar">
+    <input class="form-control" id="ipt-busc" placeholder="Buscar Estudiantes[NIC,NAME,MATRICULA]" />
+    <button class="btn btn-danger buscar " id="b-Est">
+        <img src="../img/buscar.png" class="imgBuscar" />
+    </button>
+</div>
+<div class="divbuscaregis">
+   
+    <img style="display:none" id="loading" src="../img/594155876.gif"  width="200" height="200" />
+    <h5 style="display:none;" id="name-est" style="width:100%;text-align:center;">Nombre de Estudiante</h5>
+    <table style="display:none" class="table table-striped" id="table-info">
+       
+    </table>
+</div>
+
+<script src="~/js/buscarestudiantes.js"></script>

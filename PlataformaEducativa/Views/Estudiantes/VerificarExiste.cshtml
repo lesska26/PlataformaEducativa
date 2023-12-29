@@ -1,0 +1,21 @@
+﻿@model PlataformaEducativa.Models.ModelsView.Datos
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form asp-controller="Estudiantes" id="formExiste">
+<input type="hidden" name="IdCurso" id="IdCurso" value="@Model.CursoId" placeholder="Curso" />
+<input type="hidden" value="@Model.InstitutoId" name="IdInstituto" id="IdInstituto" placeholder="Instituto" disabled />
+<input type="text" name="Curso"  value="@Model.Curso" disabled />
+<input type="text" value="@Model.Instituto" disabled />
+<input name="Cedula" id="Cedula" placeholder="Cedula" />
+    <input id="iniciarCursoId" name="iniciarCursoId" type="hidden" value="@Model.iniciarCursoId" />
+<input type="submit" value="Aceptar" />
+</form>
+<div id="formulario">
+
+</div>
+<script src="~/js/ValidarCedula.js"></script>

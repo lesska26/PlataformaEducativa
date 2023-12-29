@@ -22,6 +22,27 @@ namespace PlataformaEducativa.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("PlataformaEducativa.Models.CursoFinalizar", b =>
+                {
+                    b.Property<int>("CursoFinalizarId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CursoFinalizarId"), 1L, 1);
+
+                    b.Property<DateTime>("FinalizoCurso")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IniciarCursoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CursoFinalizarId");
+
+                    b.HasIndex("IniciarCursoId");
+
+                    b.ToTable("cursoFinalizar");
+                });
+
             modelBuilder.Entity("PlataformaEducativa.Models.CursoNota", b =>
                 {
                     b.Property<int>("CursoNotaId")
@@ -29,9 +50,6 @@ namespace PlataformaEducativa.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CursoNotaId"), 1L, 1);
-
-                    b.Property<int>("EstudianteId")
-                        .HasColumnType("int");
 
                     b.Property<int>("EstudiantesId")
                         .HasColumnType("int");
@@ -42,24 +60,17 @@ namespace PlataformaEducativa.Migrations
                     b.Property<int>("IniciarCursoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("MateriaId")
-                        .HasColumnType("int");
-
                     b.Property<float>("Nota")
                         .HasColumnType("real");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(1)");
 
                     b.HasKey("CursoNotaId");
 
-                    b.HasIndex("EstudianteId");
+                    b.HasIndex("EstudiantesId");
 
                     b.HasIndex("IniciarCursoId");
-
-                    b.HasIndex("MateriaId");
-
-                    b.HasIndex("UsuarioId");
 
                     b.ToTable("CursoNota");
                 });
@@ -75,9 +86,17 @@ namespace PlataformaEducativa.Migrations
                     b.Property<int>("EstudiantesId")
                         .HasColumnType("int");
 
+                    b.Property<int>("IniciarCursoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(1)");
+
                     b.HasKey("CursoParticipanteId");
 
                     b.HasIndex("EstudiantesId");
+
+                    b.HasIndex("IniciarCursoId");
 
                     b.ToTable("CursoParticipante");
                 });
@@ -93,8 +112,8 @@ namespace PlataformaEducativa.Migrations
                     b.Property<int>("IniciarCursoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("MateriaId")
-                        .HasColumnType("int");
+                    b.Property<bool>("Termino")
+                        .HasColumnType("bit");
 
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
@@ -102,8 +121,6 @@ namespace PlataformaEducativa.Migrations
                     b.HasKey("CursoProfesorId");
 
                     b.HasIndex("IniciarCursoId");
-
-                    b.HasIndex("MateriaId");
 
                     b.HasIndex("UsuarioId");
 
@@ -123,7 +140,14 @@ namespace PlataformaEducativa.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<DateTime>("Duracion")
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Duracion")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UsuarioId")
@@ -134,6 +158,46 @@ namespace PlataformaEducativa.Migrations
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Cursos");
+                });
+
+            modelBuilder.Entity("PlataformaEducativa.Models.DiaSemana", b =>
+                {
+                    b.Property<int>("DiaSemanaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DiaSemanaId"), 1L, 1);
+
+                    b.Property<string>("Dias")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DiaSemanaId");
+
+                    b.ToTable("dia_Semana");
+                });
+
+            modelBuilder.Entity("PlataformaEducativa.Models.DiaSemanaCurso", b =>
+                {
+                    b.Property<int>("DiaSemanaCursoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DiaSemanaCursoId"), 1L, 1);
+
+                    b.Property<int>("DiaSemanaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IniciarCursoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("DiaSemanaCursoId");
+
+                    b.HasIndex("DiaSemanaId");
+
+                    b.HasIndex("IniciarCursoId");
+
+                    b.ToTable("diaSemanaCursos");
                 });
 
             modelBuilder.Entity("PlataformaEducativa.Models.Estudiantes", b =>
@@ -163,6 +227,17 @@ namespace PlataformaEducativa.Migrations
                     b.Property<DateTime>("FechaDeNacimiento")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Genero")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<int?>("InstitucionesId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Matricula")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Municipio")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -172,21 +247,55 @@ namespace PlataformaEducativa.Migrations
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
-                    b.Property<string>("Sector")
+                    b.Property<string>("Status")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Status")
+                    b.Property<string>("Telefono")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Verificar")
+                        .HasColumnType("bit");
+
                     b.HasKey("EstudiantesId");
+
+                    b.HasIndex("InstitucionesId");
 
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("estudiantes");
+                });
+
+            modelBuilder.Entity("PlataformaEducativa.Models.Hora", b =>
+                {
+                    b.Property<int>("HoraId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HoraId"), 1L, 1);
+
+                    b.Property<string>("AMPM")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CatidadHora")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Horas_Final")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Horas_Iniciar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("HoraId");
+
+                    b.ToTable("Horas");
                 });
 
             modelBuilder.Entity("PlataformaEducativa.Models.IniciarCurso", b =>
@@ -203,21 +312,35 @@ namespace PlataformaEducativa.Migrations
                     b.Property<int>("CursosId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaIniciar")
+                    b.Property<DateTime?>("FechaIniciar")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("HoraIniciar")
+                    b.Property<DateTime?>("Finaliza")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("HoraTerminar")
+                    b.Property<DateTime?>("Finalizo")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("HoraId")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan?>("HoraIniciar")
+                        .HasColumnType("time");
+
+                    b.Property<TimeSpan?>("HoraTerminar")
+                        .HasColumnType("time");
 
                     b.Property<int>("InstitucionesId")
                         .HasColumnType("int");
 
+                    b.Property<byte?>("Termino")
+                        .HasColumnType("tinyint");
+
                     b.HasKey("IniciarCursoId");
 
                     b.HasIndex("CursosId");
+
+                    b.HasIndex("HoraId");
 
                     b.HasIndex("InstitucionesId");
 
@@ -239,6 +362,9 @@ namespace PlataformaEducativa.Migrations
                     b.Property<DateTime>("FechaRegistro")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Gestor")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Municipio")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -247,8 +373,7 @@ namespace PlataformaEducativa.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Sector")
-                        .IsRequired()
+                    b.Property<string>("Telefono")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("InstitucionesId");
@@ -256,25 +381,35 @@ namespace PlataformaEducativa.Migrations
                     b.ToTable("instituciones");
                 });
 
-            modelBuilder.Entity("PlataformaEducativa.Models.Materia", b =>
+            modelBuilder.Entity("PlataformaEducativa.Models.List_Est_Curso", b =>
                 {
-                    b.Property<int>("MateriaId")
+                    b.Property<int>("List_Est_CursoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MateriaId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("List_Est_CursoId"), 1L, 1);
 
-                    b.Property<DateTime>("Hora")
+                    b.Property<int>("CursoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EstudiantesId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("MateriaName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("InstitucioneId")
+                        .HasColumnType("int");
 
-                    b.HasKey("MateriaId");
+                    b.HasKey("List_Est_CursoId");
 
-                    b.ToTable("materia");
+                    b.HasIndex("CursoId");
+
+                    b.HasIndex("EstudiantesId");
+
+                    b.HasIndex("InstitucioneId");
+
+                    b.ToTable("List_Est_Curso");
                 });
 
             modelBuilder.Entity("PlataformaEducativa.Models.Municipio", b =>
@@ -312,28 +447,6 @@ namespace PlataformaEducativa.Migrations
                     b.ToTable("roles");
                 });
 
-            modelBuilder.Entity("PlataformaEducativa.Models.Sector", b =>
-                {
-                    b.Property<int>("SectorId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SectorId"), 1L, 1);
-
-                    b.Property<int>("MunicipioId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SectorName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("SectorId");
-
-                    b.HasIndex("MunicipioId");
-
-                    b.ToTable("sector");
-                });
-
             modelBuilder.Entity("PlataformaEducativa.Models.Usuario", b =>
                 {
                     b.Property<int>("UsuarioId")
@@ -346,6 +459,9 @@ namespace PlataformaEducativa.Migrations
                         .IsRequired()
                         .HasMaxLength(35)
                         .HasColumnType("nvarchar(35)");
+
+                    b.Property<string>("Cedula")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte>("Confirmar")
                         .HasColumnType("tinyint");
@@ -365,6 +481,15 @@ namespace PlataformaEducativa.Migrations
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Foto")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Genero")
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<int?>("InstitucionesId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Municipio")
                         .IsRequired()
                         .HasMaxLength(25)
@@ -377,8 +502,8 @@ namespace PlataformaEducativa.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("RolesId")
                         .HasColumnType("int");
@@ -398,6 +523,8 @@ namespace PlataformaEducativa.Migrations
 
                     b.HasKey("UsuarioId");
 
+                    b.HasIndex("InstitucionesId");
+
                     b.HasIndex("RolesId");
 
                     b.ToTable("usuarios");
@@ -411,7 +538,7 @@ namespace PlataformaEducativa.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Usuario_MateriaId"), 1L, 1);
 
-                    b.Property<int>("MateriaId")
+                    b.Property<int>("CursosId")
                         .HasColumnType("int");
 
                     b.Property<int>("UsuarioId")
@@ -419,18 +546,29 @@ namespace PlataformaEducativa.Migrations
 
                     b.HasKey("Usuario_MateriaId");
 
-                    b.HasIndex("MateriaId");
+                    b.HasIndex("CursosId");
 
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("usuario_Materias");
                 });
 
+            modelBuilder.Entity("PlataformaEducativa.Models.CursoFinalizar", b =>
+                {
+                    b.HasOne("PlataformaEducativa.Models.IniciarCurso", "IniciarCurso")
+                        .WithMany()
+                        .HasForeignKey("IniciarCursoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("IniciarCurso");
+                });
+
             modelBuilder.Entity("PlataformaEducativa.Models.CursoNota", b =>
                 {
                     b.HasOne("PlataformaEducativa.Models.Estudiantes", "Estudiantes")
                         .WithMany()
-                        .HasForeignKey("EstudianteId")
+                        .HasForeignKey("EstudiantesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -440,25 +578,9 @@ namespace PlataformaEducativa.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PlataformaEducativa.Models.Materia", "Materia")
-                        .WithMany()
-                        .HasForeignKey("MateriaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PlataformaEducativa.Models.Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Estudiantes");
 
                     b.Navigation("IniciarCurso");
-
-                    b.Navigation("Materia");
-
-                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("PlataformaEducativa.Models.CursoParticipante", b =>
@@ -469,7 +591,15 @@ namespace PlataformaEducativa.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("PlataformaEducativa.Models.IniciarCurso", "IniciarCurso")
+                        .WithMany()
+                        .HasForeignKey("IniciarCursoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Estudiantes");
+
+                    b.Navigation("IniciarCurso");
                 });
 
             modelBuilder.Entity("PlataformaEducativa.Models.CursoProfesor", b =>
@@ -480,12 +610,6 @@ namespace PlataformaEducativa.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PlataformaEducativa.Models.Materia", "Materia")
-                        .WithMany()
-                        .HasForeignKey("MateriaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("PlataformaEducativa.Models.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioId")
@@ -493,8 +617,6 @@ namespace PlataformaEducativa.Migrations
                         .IsRequired();
 
                     b.Navigation("IniciarCurso");
-
-                    b.Navigation("Materia");
 
                     b.Navigation("Usuario");
                 });
@@ -510,13 +632,38 @@ namespace PlataformaEducativa.Migrations
                     b.Navigation("Usuario");
                 });
 
+            modelBuilder.Entity("PlataformaEducativa.Models.DiaSemanaCurso", b =>
+                {
+                    b.HasOne("PlataformaEducativa.Models.DiaSemana", "DiaSemana")
+                        .WithMany()
+                        .HasForeignKey("DiaSemanaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PlataformaEducativa.Models.IniciarCurso", "IniciarCurso")
+                        .WithMany()
+                        .HasForeignKey("IniciarCursoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("DiaSemana");
+
+                    b.Navigation("IniciarCurso");
+                });
+
             modelBuilder.Entity("PlataformaEducativa.Models.Estudiantes", b =>
                 {
+                    b.HasOne("PlataformaEducativa.Models.Instituciones", "Instituciones")
+                        .WithMany()
+                        .HasForeignKey("InstitucionesId");
+
                     b.HasOne("PlataformaEducativa.Models.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Instituciones");
 
                     b.Navigation("Usuario");
                 });
@@ -529,6 +676,12 @@ namespace PlataformaEducativa.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("PlataformaEducativa.Models.Hora", "Hora")
+                        .WithMany()
+                        .HasForeignKey("HoraId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("PlataformaEducativa.Models.Instituciones", "Instituciones")
                         .WithMany()
                         .HasForeignKey("InstitucionesId")
@@ -537,36 +690,60 @@ namespace PlataformaEducativa.Migrations
 
                     b.Navigation("Cursos");
 
+                    b.Navigation("Hora");
+
                     b.Navigation("Instituciones");
                 });
 
-            modelBuilder.Entity("PlataformaEducativa.Models.Sector", b =>
+            modelBuilder.Entity("PlataformaEducativa.Models.List_Est_Curso", b =>
                 {
-                    b.HasOne("PlataformaEducativa.Models.Municipio", "Municipio")
+                    b.HasOne("PlataformaEducativa.Models.Cursos", "Cursos")
                         .WithMany()
-                        .HasForeignKey("MunicipioId")
+                        .HasForeignKey("CursoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Municipio");
+                    b.HasOne("PlataformaEducativa.Models.Estudiantes", "Estudiantes")
+                        .WithMany()
+                        .HasForeignKey("EstudiantesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PlataformaEducativa.Models.Instituciones", "Instituciones")
+                        .WithMany()
+                        .HasForeignKey("InstitucioneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cursos");
+
+                    b.Navigation("Estudiantes");
+
+                    b.Navigation("Instituciones");
                 });
 
             modelBuilder.Entity("PlataformaEducativa.Models.Usuario", b =>
                 {
+                    b.HasOne("PlataformaEducativa.Models.Instituciones", "Instituciones")
+                        .WithMany()
+                        .HasForeignKey("InstitucionesId");
+
                     b.HasOne("PlataformaEducativa.Models.Roles", "Roles")
                         .WithMany()
                         .HasForeignKey("RolesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Instituciones");
+
                     b.Navigation("Roles");
                 });
 
             modelBuilder.Entity("PlataformaEducativa.Models.Usuario_Materia", b =>
                 {
-                    b.HasOne("PlataformaEducativa.Models.Materia", "Materia")
+                    b.HasOne("PlataformaEducativa.Models.Cursos", "Cursos")
                         .WithMany()
-                        .HasForeignKey("MateriaId")
+                        .HasForeignKey("CursosId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -576,7 +753,7 @@ namespace PlataformaEducativa.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Materia");
+                    b.Navigation("Cursos");
 
                     b.Navigation("Usuario");
                 });

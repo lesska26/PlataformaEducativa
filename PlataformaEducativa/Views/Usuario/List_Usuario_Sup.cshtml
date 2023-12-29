@@ -1,0 +1,56 @@
+﻿@model List<Instituciones>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div>
+    <div>
+        <select class="form-select" id="selecteCentros">
+            <option value="0" >Elije un Centro</option>
+            @foreach(var i in Model)
+            {
+                <option value="@i.InstitucionesId">@i.Nombre</option>
+            }
+        </select>
+        
+    </div>
+    <div>
+        <select class="form-select" id="selecteBusqueda"> 
+            <option value="0">Elije un Metodo de Busqueda</option>
+            <option value="1">
+                Cedula
+            </option>
+            <option value="2">
+                Nombre
+            </option>
+        </select>
+    </div>
+    <div>
+        <input type="search" class="form-control" placeholder="NOMBRE O CEDULA" id="inputBuq"  />
+    </div>
+    <div>
+        <button  class="btn btn-outline-success" id="btnBusqueda">Filtrar Busqueda</button>
+    </div>
+</div>
+
+<div>
+<div class="tb-header">
+        <p>Nombre Completo</p>
+        <p>Correo</p>
+        <p>Telefono</p>
+        <p>Opciones</p>
+</div>
+    <div id="divLoading" class="loadingContent">
+        <img width="200" height="200" src="/img/594155876.gif" />
+    </div>
+<div id="tb-body" class="tb-body">
+    
+</div>
+</div>
+<div id="paginacion" class="pagination">
+
+</div>
+
+  
+<script src="~/js/buscarusuario_s.js"></script>

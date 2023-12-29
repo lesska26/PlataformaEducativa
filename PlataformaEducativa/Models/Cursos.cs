@@ -12,8 +12,8 @@ namespace PlataformaEducativa.Models
         public string CursosName { get; set;}
 
         [Required]
-        [DataType(DataType.Duration)]
-        public DateTime Duracion { get; set; }
+        
+        public int Duracion { get; set; }
 
         [ForeignKey("UsuarioId")]
         public Usuario Usuario { get; set; }
@@ -21,5 +21,11 @@ namespace PlataformaEducativa.Models
         [Required]
 
         public int UsuarioId { get; set; }
+
+        [Required]
+        public DateTime FechaCreacion { get; set; }
+
+        [DataType(DataType.MultilineText)]
+        public string Descripcion { get; set; }
     }
 }

@@ -1,0 +1,70 @@
+﻿@model Estudiantes
+
+
+<h1>Editar  Estudiante</h1>
+<h5>@Model.Nombre</h5>
+<form class="form-row" asp-action="Edit" asp-controller="Estudiantes">
+<div class="col-md-4">
+    <input class="" asp-for="InstitucionesId" type="hidden" />
+    <input asp-for="FechaCreacion" type="hidden"/>
+    <input asp-for="EstudiantesId" type="hidden" />
+    <input asp-for="Status" type="hidden" />
+    <input asp-for="Verificar" type="hidden" />
+    <input asp-for="UsuarioId" type="hidden" />
+    <input asp-for="Municipio" type="hidden" />
+        <label class="font-weight-bold custom-control-label">
+        Matricula
+    </label>
+    <input class="form-control" asp-for="Matricula" readonly  />
+</div>
+<div class="col-md-4">
+        <label class="font-weight-bold  custom-control-label">Nombre</label>
+    <input class="form-control" asp-for="Nombre" />
+</div>
+<div class="col-md-4">
+        <label class="font-weight-bold  custom-control-label">Apellido</label>
+    <input class="form-control" asp-for="Apellido" />
+
+</div>
+<div class="col-md-4">
+        <label class="font-weight-bold  custom-control-label">
+          Fecha de Nacimiento
+      </label>
+      <input class="form-control" asp-for="FechaDeNacimiento" />
+</div>
+<div class="col-md-4">
+        <label class="font-weight-bold  custom-control-label">
+        Genero
+    </label>
+    <div>
+            @if (Model.Genero == 'H')
+            {
+                <label class="custom-control-label">Hombre</label>
+                <input class="" type="radio" asp-for="Genero" checked value="H">
+                <label class="custom-control-label">Mujer</label>
+                <input type="radio" asp-for="Genero" value="M">
+            }
+            else
+            {
+                <label class="custom-control-label">Hombre</label>
+                <input type="radio" asp-for="Genero"  value="H">
+                <label class="custom-control-label">Mujer</label>
+                <input type="radio" asp-for="Genero" checked value="M">
+            }
+    </div>
+     
+    </div>
+   <div class="col-md-4">
+        <label class="font-weight-bold custom-control-label">Correo</label>
+        <input class="form-control" asp-for="Correo" />
+   </div>
+   <div class="col-md-4">
+        <label class="font-weight-bold custom-control-label">Telefono</label>
+       <input class="form-control" asp-for="Telefono" />
+   </div>
+   <div class="col-md-4">
+        <label class="font-weight-bold custom-control-label">Cedula</label>
+       <input class="form-control" asp-for="Cedula" />
+   </div>
+    <input type="submit" class="btn btn-success" value="Editar" />
+</form>

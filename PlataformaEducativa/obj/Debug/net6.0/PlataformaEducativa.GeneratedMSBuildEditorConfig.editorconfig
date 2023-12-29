@@ -9,37 +9,209 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PlataformaEducativa
 build_property.RootNamespace = PlataformaEducativa
-build_property.ProjectDir = C:\Users\aksse\source\repos\PlataformaEducativa\PlataformaEducativa\
+build_property.ProjectDir = C:\Users\aksse\OneDrive\Escritorio\PlataformaEducativa\PlataformaEducativa\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\aksse\source\repos\PlataformaEducativa\PlataformaEducativa
+build_property.MSBuildProjectDirectory = C:\Users\aksse\OneDrive\Escritorio\PlataformaEducativa\PlataformaEducativa
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/aksse/source/repos/PlataformaEducativa/PlataformaEducativa/Views/Home/Index.cshtml]
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Asig_Prof/A_S_M.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ19Qcm9mXEFfU19NLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Asig_Prof/M_I.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ19Qcm9mXE1fSS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Calificar/CalificarEstudiantes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsaWZpY2FyXENhbGlmaWNhckVzdHVkaWFudGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Cursos/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29zXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Cursos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Estudiantes/BucardorEstudiantes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcQnVjYXJkb3JFc3R1ZGlhbnRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Estudiantes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Estudiantes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Estudiantes/List_Estudt_Curso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcTGlzdF9Fc3R1ZHRfQ3Vyc28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Estudiantes/VerificarExiste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcVmVyaWZpY2FyRXhpc3RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Estudiantes/_RegistrarEstudiante.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcX1JlZ2lzdHJhckVzdHVkaWFudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Habilitar/HabilitarCurso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaWxpdGFyXEhhYmlsaXRhckN1cnNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aksse/source/repos/PlataformaEducativa/PlataformaEducativa/Views/Home/Privacy.cshtml]
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aksse/source/repos/PlataformaEducativa/PlataformaEducativa/Views/Shared/Error.cshtml]
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Hora/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/IniciarCurso/AsignarProf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhckN1cnNvXEFzaWduYXJQcm9mLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/IniciarCurso/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhckN1cnNvXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/IniciarCurso/CursosActivos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhckN1cnNvXEN1cnNvc0FjdGl2b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/IniciarCurso/CursosFinalizados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhckN1cnNvXEN1cnNvc0ZpbmFsaXphZG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/IniciarCurso/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhckN1cnNvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/IniciarCurso/Iniciar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhckN1cnNvXEluaWNpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/IniciarCurso/IniciarEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhckN1cnNvXEluaWNpYXJFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/IniciarCurso/TusCursosActivos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lhckN1cnNvXFR1c0N1cnNvc0FjdGl2b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Instituciones/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdGl0dWNpb25lc1xDcmVhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Instituciones/editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdGl0dWNpb25lc1xlZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Instituciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdGl0dWNpb25lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/List_EsperaEst/List_EsperaEst.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdF9Fc3BlcmFFc3RcTGlzdF9Fc3BlcmFFc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Municipio/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVuaWNpcGlvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Perfil/Perfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXFBlcmZpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Perfil/VerPerfilUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXFZlclBlcmZpbFVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aksse/source/repos/PlataformaEducativa/PlataformaEducativa/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aksse/source/repos/PlataformaEducativa/PlataformaEducativa/Views/_ViewImports.cshtml]
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/S_IniciarCurso/List_IniciarCurso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU19JbmljaWFyQ3Vyc29cTGlzdF9JbmljaWFyQ3Vyc28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/AccesoDenegado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBY2Nlc29EZW5lZ2Fkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/AsignarMateria.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBc2lnbmFyTWF0ZXJpYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/EditAsignarMatarial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0QXNpZ25hck1hdGFyaWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/List_Usuario_Sup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMaXN0X1VzdWFyaW9fU3VwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/Registrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xSZWdpc3RyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/R_S_Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xSX1NfQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/VerProfesor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWZXJQcm9mZXNvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/VerUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWZXJVc3VhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/VistaRolesParcial/FacilitadorPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWaXN0YVJvbGVzUGFyY2lhbFxGYWNpbGl0YWRvclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/VistaRolesParcial/_AdminPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWaXN0YVJvbGVzUGFyY2lhbFxfQWRtaW5QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/VistaRolesParcial/_GestorPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWaXN0YVJvbGVzUGFyY2lhbFxfR2VzdG9yUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/VistaRolesParcial/_ServicioPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWaXN0YVJvbGVzUGFyY2lhbFxfU2VydmljaW9QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Usuario/VistaRolesParcial/_SupervisorPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWaXN0YVJvbGVzUGFyY2lhbFxfU3VwZXJ2aXNvclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aksse/source/repos/PlataformaEducativa/PlataformaEducativa/Views/_ViewStart.cshtml]
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aksse/source/repos/PlataformaEducativa/PlataformaEducativa/Views/Shared/_Layout.cshtml]
+[C:/Users/aksse/OneDrive/Escritorio/PlataformaEducativa/PlataformaEducativa/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-448ohj9aeb

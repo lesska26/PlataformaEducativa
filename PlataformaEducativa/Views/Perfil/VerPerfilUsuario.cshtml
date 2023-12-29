@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewData["Title"] = "VerPerfilUsuario";
+}
+
+<h1 style="text-align:center">Datos Del Usuario</h1>
+<div style="display:flex;">
+    <div style="margin-top:-50px;min-height:100vh;background:#0D2847;width:200px;">
+        <div style="margin-top:15px;display:flex;flex-wrap:wrap;justify-content:center;">
+            <img width="150" height="150" style="border-radius:50%;" src="~/img/imgUser/user.jpeg" />
+            <p style="font-size:18px;color:white;width:100%;text-align:center">Nombre</p>
+            <p style="font-size:15px;color:white;width:100%;text-align:center">Kevin Akssel</p>
+            <p style="font-size:18px;color:white;width:100%;text-align:center">Apellido</p>
+            <p style="font-size:15px;color:white;width:100%;text-align:center">Lorenzo Rodriguez</p>
+            <p style="font-size:18px;color:white;width:100%;text-align:center">Correo</p>
+            <p style="font-size:15px;color:white;width:100%;text-align:center">akssel@hotmail.com</p>
+            <p style="font-size:18px;color:white;width:100%;text-align:center">Telefono</p>
+            <p style="font-size:15px;color:white;width:100%;text-align:center">8095645654</p>
+            <p style="font-size:18px;color:white;width:100%;text-align:center">Profesion</p>
+            <p style="font-size:15px;color:white;width:100%;text-align:center">Facilitador</p>
+        </div>
+    </div>
+    <div style="margin:20px;width:70%;display:flex;flex-wrap:wrap">
+        <canvas  id="chartGrafica">
+        </canvas>
+        <canvas id="chartPie">
+
+        </canvas>
+    </div>
+  
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const canvas = document.getElementById("chartGrafica");
+        const canvas2 = document.getElementById("chartPie");
+        function Grafico(ArrayNombre, arrayData) {
+
+            new Chart(canvas, {
+                type: 'bar',
+                data: {
+                    labels:['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: 'Meta del año',
+                        data:[12, 19, 3, 5, 2, 3],
+                        borderWidth: 1,
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(75, 192, 192)',
+                            'rgb(255, 205, 86)',
+                            'rgb(201, 203, 207)',
+                            'rgb(54, 162, 235)'
+                        ]
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+
+
+        }
+        Grafico();
+
+        function GraficoPie() {
+            new Chart(canvas2, {
+                type: 'polarArea',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: 'Curso mas Impartido',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(75, 192, 192)',
+                            'rgb(255, 205, 86)',
+                            'rgb(201, 203, 207)',
+                            'rgb(54, 162, 235)'
+                        ]
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+        }
+
+        GraficoPie();
+
+    })
+</script>
+

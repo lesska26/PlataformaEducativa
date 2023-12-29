@@ -1,0 +1,153 @@
+﻿@model PlataformaEducativa.Models.ModelsView.IniciarCursoView
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="caja-orden">
+
+    <form >
+        <div class="d_cEdt">
+            <label>Curso</label>
+            <input type="hidden" value="@Model.Cursoss.CursosId" id="CursoId" />
+            <input type="hidden" value="@Model.IniciarCursoId" id="iniciarCursoId" />
+            <input asp-for="@Model.Cursoss.CursosName" name="@Model.Cursoss.CursosId"  readonly />
+        </div>
+        <div class="d_cEdt">
+            <label>Profesor</label>
+            @if (string.IsNullOrEmpty(Model.Profesor))
+            {
+                <select id="profesor">
+                    <option value="0">Seleccione un Profesor</option>
+                    @foreach (var i in Model.Profesores)
+                    {
+                        <option value="@i.UsuarioId">@i.Nombre</option>
+                    }
+                </select>
+            }
+            else
+            {
+                <select id="profesor">
+                    <option selected value="@Model.ProfesorId">@Model.Profesor</option>
+                    @foreach (var i in Model.Profesores)
+                    {
+                        <option value="@i.UsuarioId">@i.Nombre</option>
+                    }
+                </select>
+            }
+
+        </div>
+        <div class="d_cEdt">
+            <label>Dias De Clases</label>
+
+            <div id="deleteDia">
+                @foreach (var i in Model.dias)
+                {
+                    <label>@i.Dias</label>
+                    <input type="checkbox" value="@i.DiaSemanaId" checked />
+                }
+
+            </div>
+            <div id="agregarDia">
+                <label>otros Dias</label>
+                <br />
+                @foreach (var i in Model.DiasNoLaboral)
+                {
+                    <label>@i.Dias</label>
+                    <input type="checkbox" value="@i.DiaSemanaId">
+                }
+            </div>
+        </div>
+
+        <div class="d_cEdt">
+            <label>Hora</label>
+            <select id="Hora">
+                @foreach (var i in Model.HorlaLista)
+                {
+                    if (i.HoraId == Model.Hora.HoraId)
+                    {
+                        <option selected value="@i.HoraId">@string.Format($"{i.Horas_Iniciar} a {@i.Horas_Final}")</option>
+                    }
+
+                    <option value="@i.HoraId">
+                        @string.Format($"{@i.Horas_Iniciar } a {@i.Horas_Final}")
+                    </option>
+
+                }
+            </select>
+        </div>
+        <div class="d_cEdt">
+            <button id="guardar" class="btn btn-success">Actualizar</button>
+        </div>
+    </form>
+
+    <div class="info-p" style="display:none">
+        <div  class="info-img">
+            <img id="imagen" class="img-info" />
+            <p id="pNombre" class="info-Nombre">Nombre</p>
+        </div>
+        <div class="C-tex-info">
+            <div>
+                <p class="p-text">Nombre:</p>
+                <span id="spanNombre" class="span-text">Kevin</span>
+            </div>
+            <div>
+                <p class="p-text">Correo:</p>
+                <span id="spanCorreo" class="span-text">Correo@hotmail.com</span>
+            </div>
+            <div>
+                <p class="p-text">Telefono:</p>
+                <span id="spanTelefono" class="span-text">8095635308</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/js/editiniciarcurso.js"></script>
+<script>
+    let Actualizar = document.querySelector("form");
+    Actualizar.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let selectProfesor = document.getElementById("profesor");
+        let selectHorario = document.getElementById("Hora");
+        let IniciarId = document.getElementById("iniciarCursoId");
+        let eliminarDia = document.getElementById("deleteDia").querySelectorAll("input");
+        let ActualizarDia = document.getElementById("agregarDia").querySelectorAll("input");
+        let xhr = new XMLHttpRequest();
+        let eliminarDias = [];
+        let agregarDia = [];
+
+        eliminarDia.forEach(c=>{
+            if(c.checked==false)
+            {
+                eliminarDias.push(c.value);
+            };
+        })
+        ActualizarDia.forEach(c=>{
+            if (c.checked) {
+                agregarDia.push(c.value);
+            }
+        })
+
+        xhr.open("POST", "/IniciarCurso/UpdateIniciar");
+        let dato = {
+            EliminarDia: eliminarDias,
+            AgreagarDias: agregarDia,
+            IniciarCursoId: IniciarId.value,
+            ProfesorId: selectProfesor.value,
+            Hora: selectHorario.value
+
+        };
+        let json = JSON.stringify(dato);
+        console.log(json);
+        xhr.setRequestHeader("Content-Type","application/json");
+
+        xhr.send(json);
+
+
+    })
+</script>

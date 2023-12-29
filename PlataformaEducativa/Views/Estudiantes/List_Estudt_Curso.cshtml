@@ -1,0 +1,26 @@
+﻿@model List<CursoParticipante>
+
+@{
+    ViewData["Title"] = "List_Estudt_Curso";
+}
+
+<h1>Lista de Estudiantes</h1>
+@foreach(var  i in Model)
+{
+    
+}
+<table class="table table-borderless">
+    <tr>
+        <th>Nombre</th>
+        <th>Opciones</th>
+    </tr>
+    @foreach(var i in Model)
+    {
+        <tr>
+            <td>@i.Nombre</td>
+            <td>
+                <a class="btn btn-danger" asp-action="Edit" asp-route-id="@i.EstudiantesId">Editar</a>
+            </td>
+        </tr>
+    }
+</table>

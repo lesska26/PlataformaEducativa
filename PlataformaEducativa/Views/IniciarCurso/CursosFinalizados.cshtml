@@ -1,0 +1,27 @@
+﻿@model List<PlataformaEducativa.Models.ModelsView.IniciarCursoView>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<table class="table table-dark">
+    <tr>
+        
+        <th scope="col"> Curso</th>
+        <th scope="col">Instituto</th>
+        <th scope="col">Hora</th>
+        <th scope="col">Estudiantes</th>
+        <th scope="col">Termino</th>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td scope="row">@i.NombreCurso</td>
+            <td scope="row">@i.Instituto</td>
+            <td scope="row">@i.Horas</td>
+            <td scope="row">@i.Estudiantes</td>
+            <td scope="row">@i.Finalizo</td>
+           
+        </tr>
+    }
+</table>

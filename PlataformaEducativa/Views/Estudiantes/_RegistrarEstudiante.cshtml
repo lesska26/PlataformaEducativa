@@ -1,0 +1,56 @@
+﻿@* @* @* @* @* @* @model Estudiantes
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@* *@
+
+<div class="row row-cols-2 mt-5">
+    <div class="col mt-2"> 
+        <label class="control-label" >Nombre</label>
+        <input class="form-control" type="text" id="Nombre" />
+        <span id="spanNombre" style="color:red;"></span>
+    </div>
+    <div class="col mt-2">
+        <labe class="control-label"l>Apellido</labe>
+        <input class="form-control" type="text" id="Apellido" />
+        <span id="spanApellido" style="color:red;"></span>
+    </div>
+    <div class="col mt-2">
+
+        <label class="label-control">Cedula</label>
+        <input placeholder="Opcional" class="form-control" type="text" id="Cedulas"></input>
+        <span id="spanCedula" style="color:red;display:none;" >Existe</span>
+    </div>
+    <div class="col mt-2">
+        <label class="label-control">Correo</label>
+        <input class="form-control" type="email" id="Correo" />
+        <span id="spanEmail" style="color:red;"></span>
+    </div>
+    <div class="col mt-2">
+        <label class="label-control">Telefono</label>
+        <input class="form-control" type="tel" id="Telefono" />
+        <span id="spanTelefono" style="color:red;"></span>
+    </div>
+    <div class="col mt-2">
+        <label class="label-control">Fecha de Nacimiento</label>
+        <input class="form-control" type="date" max="2023-12-6" id="Fecha"  required/>
+        <span id="spanCedula" style="color:red;"></span>
+    </div>
+    <div class="col mt-2">
+        <label>Genero</label>
+        <div>
+            <label>Hombre</label>
+            <input type="radio" value="H" name="Genero" id="H"/>
+            <label>Mujer</label>
+            <input type="radio" value="M" name="Genero" id="M" />
+        </div>
+        <span id="spanGenero" style="color:red;"></span>
+    </div>
+    <div>
+        <input type="submit" value="Crear" id="btnCrear" class="btn btn-outline-success" />
+    </div>
+</div>

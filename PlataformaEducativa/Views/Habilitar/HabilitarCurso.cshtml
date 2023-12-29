@@ -1,0 +1,92 @@
+﻿@model PlataformaEducativa.Models.ModelsView.HabilitarCurso
+@{
+    ViewData["Title"] = "HabilitarCurso";
+}
+
+<h1>HabilitarCurso</h1>
+
+<div class="contentH_C">
+    <div class="divSelect">
+        <select id="selectCurso" class="form-select" >
+            <option value="0">Selecione un Curso</option>
+            @foreach(var i in Model.Cursos)
+            {
+                <option value="@i.CursosId">@i.CursosName</option>
+            }
+        </select>
+    </div>
+    <div class="divSelect">
+        <label class="custom-control-label">Municipio</label>
+        <select class="form-select" id="municipio">
+            <option value="0">Selecionar Municipio</option>
+            @foreach(var i in Model.Municipio)
+            {
+                <option value="@i.MunicipioId">@i.MunicipioName</option>
+            }
+        </select>
+    </div>
+    <div id="checkDiv" class="checkDiv">
+
+    </div>
+    <div class="divbtn">
+        <button  class="btn btn-primary" id="btnHabilitar">Habilitar</button>
+    </div>
+</div>
+<script>
+    let municipio = document.getElementById("municipio");
+    let selecCurso = document.getElementById("selectCurso");
+    municipio.addEventListener("change", (e) => {
+        if (e.target.value != 0) 
+        {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", `/Habilitar/L_C?id=${e.target.value}`);
+            xhr.addEventListener("load", () => {
+
+                let json = JSON.parse(xhr.response);
+                console.log(xhr.response);
+                json.forEach(c => {
+                    document.getElementById("checkDiv").innerHTML = null;
+                    let label = document.createElement("label");
+                    let input = document.createElement("input");
+                    input.setAttribute("type", "checkbox");
+                    label.textContent = c.nombre;
+                    input.value = c.institucionesId;
+                    document.getElementById("checkDiv").append(label, input);
+                    console.log(c.nombre);
+                })
+
+            });
+            xhr.send();
+        }
+    })
+
+    let btnHabilitar = document.getElementById("btnHabilitar");
+    btnHabilitar.addEventListener("click",Habilitar);
+
+    function Habilitar() {
+        if (selecCurso.value != 0 && municipio.value != 0) {
+            let checkDiv = document.getElementById("checkDiv");
+           let cant=checkDiv.querySelectorAll("input");
+            if (cant.length > 0) {
+                let instituto = [];
+                cant.forEach(c => {
+                    if (c.checked) {
+                        instituto.push(c.value);
+                    }
+                })
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST");
+                xhr.addEventListener("load", () => {
+
+                });
+                xhr.setRequestHeader("Content-Type", "application/json");
+
+                xhr.send();
+            }
+
+        }
+      
+    }
+
+
+</script>

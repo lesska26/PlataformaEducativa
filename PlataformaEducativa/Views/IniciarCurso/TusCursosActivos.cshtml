@@ -1,0 +1,34 @@
+﻿@model List< PlataformaEducativa.Models.ModelsView.IniciarCursoView>
+@{
+    ViewData["Title"] = "TusCursosActivos";
+}
+
+<h1>Curso en Activos</h1>
+<table class="table table-striped">
+    <tr>
+        <th>Curso</th>
+        <th>Hora</th>
+        <th>Profesor</th>
+        <th>Dias</th>
+        <th>Inicio</th>
+        <th>Finaliza</th>
+   </tr>
+    @foreach(var i in Model)
+    {
+        <tr>
+            <td>@i.NombreCurso</td>
+            <td>@string.Format($"{i.Hora.Horas_Iniciar} a {i.Hora.Horas_Final}")</td>
+            <td>@i.Profesor</td>
+            <td>
+            @foreach(var s in i.diaSemanas)
+            {
+                
+                <p>@s.Dias</p>
+            }
+            </td>
+            <td>@i.FechaInicio</td>
+            <td>@i.Finalizo</td>
+        </tr>
+    }
+</table>
+

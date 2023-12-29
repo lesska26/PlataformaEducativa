@@ -1,0 +1,68 @@
+﻿@model PlataformaEducativa.Models.ModelsView.LoginView
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+*@
+@{
+    Layout = null;
+
+}
+
+<!Doctype html>
+<html>
+
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/login.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card border-0 shadow rounded-3 my-5">
+                    <div class="card-body p-4 p-sm-5">
+                        <div class="card-title text-center mb-5 fw-light fs-5" >
+                            <img src="../img/descarga.png" style="width:130px" />
+                        </div>
+                        <form asp-action="Login" asp-controller="Usuario">
+                            <div class="form-floating mb-3">
+
+                                <input asp-for="Users" class="form-control" id="floatingInput" placeholder="name@example.com" />
+
+                                <label asp-for="Users" for="floatingInput"></label>
+                            </div>
+                            <div class="form-floating mb-3">
+
+                                <input asp-for="Password" class="form-control" id="floatingPassword" placeholder="Password" />
+
+                                <label asp-for="Password" for="floatingPassword"></label>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                                <label class="form-check-label" for="rememberPasswordCheck">
+                                    Remember password
+                                </label>
+                            </div>
+
+                            <hr class="my-4">
+                            <div class="d-grid mb-2">
+
+                                <input type="submit" value="Login" class="btn btn-google btn-login text-uppercase fw-bold" />
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+</html>

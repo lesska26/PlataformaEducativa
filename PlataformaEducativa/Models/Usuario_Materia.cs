@@ -7,12 +7,12 @@ namespace PlataformaEducativa.Models
     {
         [Key]
         public int Usuario_MateriaId { get; set; }
-        [ForeignKey("MateriaId")]
-        public Materia Materia { get; set; }
+        [ForeignKey("CursosId")]
+        public Cursos Cursos { get; set; }
 
         [Required]
 
-        public int MateriaId { get; set; }
+        public int CursosId { get; set; }
         [ForeignKey("UsuarioId")] 
         public Usuario Usuario { get; set; }
 

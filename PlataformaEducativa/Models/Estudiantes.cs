@@ -9,18 +9,20 @@ namespace PlataformaEducativa.Models
         [Key]
         public int  EstudiantesId{get;set;}
         [Required]
-        [StringLength(25,ErrorMessage="Caracteres Maximo '{0}' y Caracteres Minimos '{1}'",ErrorMessageResourceName ="Nombre",ErrorMessageResourceType =null,MinimumLength =5)]
+        [StringLength(25,ErrorMessage="Caracteres Maximo '{0}' y Caracteres Minimos '{1}'",ErrorMessageResourceName =null,ErrorMessageResourceType =null,MinimumLength =5)]
         [Display(Name ="Nombre Completo")]
         public string Nombre { get; set; }
 
         [Required]
-        [StringLength(35,ErrorMessage = "Caracteres Maximo '{0}' y Caracteres Minimos '{1}'",ErrorMessageResourceName ="Apellido",ErrorMessageResourceType =null,MinimumLength =5)]
+        [StringLength(35,ErrorMessage = "Caracteres Maximo '{0}' y Caracteres Minimos '{1}'",ErrorMessageResourceName =null,ErrorMessageResourceType =null,MinimumLength =5)]
         [Display(Name ="Apellido Completo ")]
         public string Apellido { get; set; }
         [Required]
         //qui va una expresion regular para validar la cedula
-        public string Cedula { get; set; }
+        public string? Cedula { get; set; }
 
+        [Required]
+        public string? Matricula { get; set; }
         [Required]
         [DataType(DataType.Date)]
         [Display(Name ="Fecha de Nacimiento")]
@@ -31,18 +33,27 @@ namespace PlataformaEducativa.Models
         [EmailAddress]
         public string Correo { get; set; }
         [Required]
+        
+        public char Genero { get; set; }
+        [Required]
         public string Municipio { get; set; }
-        public string? Sector { get; set; }
        
         public DateTime FechaCreacion { get; set; }
         [Required]
         [Display(Name ="Estado del Estudiante")]
         public string Status { get; set; }
         [ForeignKey("UsuarioId")]
-        public Usuario Usuario { get; set;}
+        public Usuario? Usuario { get; set;}
 
         [Required]
         public int UsuarioId { get; set; }
 
+        public string Telefono { get; set; }
+
+        public bool Verificar { get; set; }
+
+        [ForeignKey("InstitucionesId")]
+        public Instituciones? Instituciones { get; set; }
+        public int? InstitucionesId { get; set; }
     }
 }

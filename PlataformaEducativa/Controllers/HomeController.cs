@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PlataformaEducativa.Models;
 using System.Diagnostics;
 
 namespace PlataformaEducativa.Controllers
 {
+    //[Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -13,6 +15,7 @@ namespace PlataformaEducativa.Controllers
             _logger = logger;
         }
 
+       
         public IActionResult Index()
         {
             return View();

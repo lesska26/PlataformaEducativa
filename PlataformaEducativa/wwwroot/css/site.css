@@ -15,4 +15,282 @@ html {
 
 body {
   margin-bottom: 60px;
+  
+ 
+}
+
+.cursosDiv{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+
+
+.cursosDiv>*{
+    margin:5px;
+}
+.divbuscaregis{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+formHora {
+    width: 300px;
+    margin: 0 auto;
+}
+
+input[type="time"] {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+
+.sombra {
+    box-shadow: 4px 3px 36px -6px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 4px 3px 36px -6px rgba(0,0,0,0.8);
+    -moz-box-shadow: 4px 3px 36px -6px rgba(0,0,0,0.8);
+    max-width: 800px;
+    margin: auto;
+    padding: 15px;
+    margin-top: -66px;
+}
+.img-ctc {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    margin-bottom: 30px;
+
+}
+.activo {
+    transition: 0.8s;
+    filter: drop-shadow(-2px 2px 15px rgba(255, 0, 0));
+}
+
+/*.desactivo {
+    transition: 0.5s;
+    filter: drop-shadow(-2px 2px 15px rgba(6, 69, 201, 0.8));
+}
+*/
+.desactivo {
+    transition: 0.8s;
+    filter: drop-shadow(0px 4px 30px rgba(255, 0, 0));
+}
+
+
+.divImg {
+    display: flex;
+    justify-content: center;
+}
+
+.divInputFile {
+    display: flex;
+    justify-content: center;
+}
+.formEstilo {
+    width: 50%;
+    margin: auto;
+    max-width: 580px;
+}
+
+.labelP{
+    width:100%;
+    text-align:center;
+
+
+}
+
+#previewImage {
+    max-width: 100%;
+    max-height: 200px;
+    margin-top: 10px;
+    display: block;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    background: #09265c;
+    color: white;
+}
+
+#nombre{
+ text-align:center;
+}
+
+.info-n {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: #09265c;
+    height: 230px;
+}
+.caja-orden {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.info-p {
+    width: 45%;
+    background: darkblue;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+}
+
+.img-info {
+    width: 85%;
+    height: 80%;
+}
+
+.info-Nombre {
+    width: 85%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.C-tex-info{
+    margin-top:25px;
+}
+.info-img{
+    width:45%;
+}
+.p-text {
+    margin-bottom: 5px;
+}
+.span-text{
+    margin-left:15px;
+}
+.d_cEdt {
+    margin: 15px;
+    padding-top: 5px;
+}
+
+.P_Cdiv {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.P_div {
+    width: 80%;
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+}
+.FormEdit {
+    width: 80%;
+    margin: auto;
+    max-width: 500px;
+    -webkit-box-shadow: -1px 8px 21px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 8px 21px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 8px 21px 0px rgba(0,0,0,0.75);
+    padding: 20px;
+}
+.form-title {
+    background: #262399;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.FormEdit > div {
+    margin-top: 10px;
+    padding: 10px;
+}
+.DivbtnEdit{
+    display:flex;
+    justify-content:center;
+}
+.tb-header {
+    display: flex;
+    height: 70px;
+    /* justify-content: space-around; */
+    /* text-align: center; */
+    
+    align-items: center;
+    background: #0D2847;
+    color: white;
+}
+
+.tb-title{
+    margin:0;
+    flex:25;
+    margin:5px;
+}
+
+.ultimo{
+    text-align:right;
+}
+
+label{
+    font-weight:bold;
+    margin:6px;
+}
+.tb-header {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.tb-header>p{
+    margin:0;
+    font-weight:bold;
+    flex:20%;
+   
+}
+.loadingContent {
+    display: flex;
+    justify-content: center;
+}
+.removeloading{
+    display:none;
+}
+.divData {
+    display: flex;
+    justify-content: space-around;
+}
+
+.divData>p{
+    flex:20%;
+}
+.divData>a{
+    flex:20%;
+}
+
+.pagination{
+    display:flex;
+    justify-content:center;
+
+}
+
+.pagination>a{
+    margin:5px;
 }

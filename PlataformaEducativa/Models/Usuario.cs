@@ -11,19 +11,19 @@ namespace PlataformaEducativa.Models
 
         [Required]
         [Display(Name = "Nombre Completo del Usuario")]
-        [StringLength(35,ErrorMessage ="Maximo '{0}' y un Minimo '{1}'",ErrorMessageResourceName ="Nombre",ErrorMessageResourceType =null,MinimumLength =5)]
+        [StringLength(35,ErrorMessage ="Maximo '{0}' y un Minimo '{1}'",ErrorMessageResourceName =null,ErrorMessageResourceType =null,MinimumLength =5)]
         public string Nombre { get; set; }
         [Required]
         [Display(Name ="Apellido Completo")]
-        [StringLength(35,ErrorMessage ="Maximo'{0}' y un Minimo '{1}'",ErrorMessageResourceName ="Apellido",ErrorMessageResourceType =null,MinimumLength =5)]
+        [StringLength(35,ErrorMessage ="Maximo'{0}' y un Minimo '{1}'",ErrorMessageResourceName =null,ErrorMessageResourceType =null,MinimumLength =5)]
         public string Apellido { get; set; }
         [Required]
         [Display(Name ="Nombre de Usuario")]
-        [StringLength(20,ErrorMessage ="Maximo '{0}' y un Minimo '{1}'",ErrorMessageResourceName = "UserName",ErrorMessageResourceType =null,MinimumLength =5)]
+        [StringLength(20,ErrorMessage ="Maximo '{0}' y un Minimo '{1}'",ErrorMessageResourceName = null,ErrorMessageResourceType =null,MinimumLength =5)]
         public string UserName { get; set; }
-        [Required]
+        [Required]  
         [DataType(DataType.Password)]
-        [StringLength(25,ErrorMessage ="Maximo '{0}' y un minimo '{1}'",ErrorMessageResourceName ="Password",ErrorMessageResourceType =null,MinimumLength =5)]
+        [StringLength(100,ErrorMessage ="Maximo '{0}' y un minimo '{1}'",ErrorMessageResourceName =null,ErrorMessageResourceType =null,MinimumLength =5)]
         [Display(Name ="Contraseña")]
         public string Password { get; set; }
 
@@ -39,11 +39,12 @@ namespace PlataformaEducativa.Models
         [Required(ErrorMessage ="Numero de Telefono Requerido")]
         public string Telefono { get; set; }
 
+        public char? Genero { get; set; }
         [Required]
         public DateTime FechaCreacion { get; set; }
 
         [Required]
-        [StringLength(50,ErrorMessage ="Maximo de Caracteres '{0}' y Minimo {1}",ErrorMessageResourceName ="Direccion",ErrorMessageResourceType =null,MinimumLength =10)]
+        [StringLength(50,ErrorMessage ="Maximo de Caracteres '{0}' y Minimo {1}",ErrorMessageResourceName =null,ErrorMessageResourceType =null,MinimumLength =10)]
         public string Direccion { get; set; }
 
         [Required]
@@ -60,6 +61,12 @@ namespace PlataformaEducativa.Models
         public int RolesId { get; set; }
 
         public byte Confirmar { get; set; }
+
+        [ForeignKey("InstitucionesId")]
+        public Instituciones? Instituciones { get; set; }
+        public int? InstitucionesId { get; set; }
+        public string? Cedula{ get; set;}
+        public string ? Foto { get; set; }
         
     }
 }

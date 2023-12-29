@@ -1,0 +1,189 @@
+﻿@model PlataformaEducativa.Models.ModelsView.List_EsperaEstView
+
+@{
+    ViewData["Title"] = "List_EsperaEst";
+}
+
+<h1>Agregar al Estudiantes a Lista de Espera</h1>
+<div>
+    <select id="Instituciones">
+        <option value="0">Elije una Institucion</option>
+        @foreach(var i in Model.Instituciones)
+        {
+            if (User.IsInRole("Admin"))
+            {
+                <option value="@i.InstitucionesId" >@i.Nombre</option>
+            }
+            else
+            {
+                if (int.Parse(User.FindFirst("InstitucionId").Value) == @i.InstitucionesId)
+                {
+                    <option value="@i.InstitucionesId" selected>@i.Nombre</option>
+                }
+            }
+
+        }
+
+    </select>
+    <select id="CursoId">
+        <option value="0">Elije una Curso</option>
+        @foreach(var i in Model.Cursos)
+        {
+            <option value="@i.CursosId">@i.CursosName</option>
+        }
+    </select>
+   
+   
+</div>
+
+<form>
+    <div>
+        <label>Nombre</label>
+        <input placeholder="Nombre de Estudiantes" id="txNombre" name="Nombre" required/>
+        <span class="text-danger" id="spanNombre"></span>
+    </div>
+    <div>
+        <label>Apellido</label>
+        <input placeholder="Apellido del Estuadiantes" id="txApellido" name="Apellido" required />
+        <span class="text-danger" id="spanApellido"></span>
+    </div>
+    <div>
+        <label>Cedula</label>
+        <input placeholder="Cedula (Opcional)" id="txCedula" name="Cedula" required />
+        <span class="text-danger" id="spanCedula"></span>
+    </div>
+    <div>
+        <label>
+            Fecha de Nacimiento
+        </label>
+        <input type="date" id="txFecha" name="Fecha" />
+        <span class="text-danger" id="spanFecha"></span>
+    </div>
+    <div>
+        <p>Sexo</p>
+        <label>Hombre</label>
+        <input type="radio" id="Hradio" name="sexo" />
+        <label>Mujer</label>
+        <input type="radio" id="Mradio" name="sexo" />
+        <span class="text-danger" id="spanSexo"></span>
+    </div>
+    <div>
+        <label>Telefono</label>
+        <input type="tel" name="Telefono" placeholder="Telefono" id="txTelefono" />
+        <span class="text-danger" id="spanTelefono"></span>
+    </div>
+    <div>
+        <button class="btn btn-success" id="btnCrear">En listar</button>
+    </div>
+</form>
+<script>
+    let txNombre = document.getElementById("txNombre");
+    let txApellido = document.getElementById("txApellido");
+    let txTelefono = document.getElementById("txTelefono");
+    let txCedula = document.getElementById("txCedula");
+    let spanCedula = document.getElementById("spanCedula");
+    let spanNombre = document.getElementById("spanNombre");
+    let spanApellido = document.getElementById("spanApellido");
+    let spanTelefono = document.getElementById("spanTelefono");
+    let txFecha = document.getElementById("txFecha");
+    let Sexo = "";
+    let Hombre = document.getElementById("Hradio");
+    let Mujer = document.getElementById("Mradio");
+    let spanSexo = document.getElementById("spanSexo");
+    let InstitucionId = document.getElementById("Instituciones");
+    let CursoId = document.getElementById("CursoId");
+    function Validar() {
+        let expNombre = /^[^\d\s]+(\s[^\d\s]+)?$/;
+        let validar = true;
+        let expApellido = /^[^\d\s]+(\s[^\d\s]+)?$/;
+        let expCedula = /^\d{3}\d{7}\d{1}$/;
+        let expTelefono = /^\d{6,15}$/;
+        let expCedula = /^\d{3}\d{7}\d{1}$/;
+        let expTelefono = /^\d{6,15}$/;
+
+        if (!expNombre.test(txNombre.value)) 
+        {
+            spanNombre.textContent = "Nombre no valido";
+            validar = false;
+        }
+        if (!expApellido.test(txApellido.value)) {
+            spanApellido.textContent = "Apellido no valido";
+            validar = false;
+        }
+        if (txCedula.value.trim().length>0) 
+        {
+            if (!expCedula.test(txCedula.value)) 
+            {
+                spanCedula.textContent = "Cedula no valida";
+                validar = false;
+            }
+        }
+        if (!expTelefono.test(txTelefono.value)) {
+            spanTelefono.textContent = "Telefono no valido";
+            validar = false;
+        }
+        if (!ValidarFecha(txFecha.value)) 
+        {
+            validar = false;
+        }
+        if (Hombre.checked==false && Mujer.checked==false) {
+            validar = false;
+            spanSexo.textContent = "Elija un Sexo";
+            console.log(`Hombre: ${Hombre.checked}  Mujer:${Mujer.checked} `);
+        }
+        if (InstitucionId.value == 0) {
+            validar = false;
+            alert("elija un Centro");
+        }
+        if(CursoId.value==0){
+            validar=false;
+            alert("elija un Curso");
+        }
+        if (validar) {
+            Sexo = Hombre.checked == true ? 'M' : 'F';
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "/List_EsperaEst/List_EsperaEst",true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            let datos = {
+                Nombre:txNombre.value,
+                Apellido:txApellido.value,
+                Edad:txFecha.value,
+                Cedula:txCedula.value,
+                Telefono:txTelefono.value,
+                Sexo,
+                InstitucionId:InstitucionId.value,
+                CursoId:CursoId.value
+
+            }
+            let json = JSON.stringify(datos);
+
+            xhr.send(json);
+        }
+            
+
+    }
+
+    function ValidarFecha(fecha) {
+        const fechaNacimiento = new Date(fecha);
+        const fechaActual = new Date();
+        const edadMinima = 3;
+        let spanFecha = document.getElementById("spanFecha");
+        if (isNaN(fechaNacimiento) || fechaActual.getFullYear() == fechaNacimiento.getFullYear()) 
+        {
+            spanFecha.textContent = "Por favor coloque una fecha coherente o valida";
+            return false;
+        }
+        let validarEdadMinima = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+        if (validarEdadMinima < 5) 
+        {
+            spanFecha.textContent="la edad minima es 5"
+            return false;
+        }
+        return true;
+    }
+
+    document.querySelector("form").addEventListener("submit", e => {
+        e.preventDefault();
+        Validar();
+    })
+</script>

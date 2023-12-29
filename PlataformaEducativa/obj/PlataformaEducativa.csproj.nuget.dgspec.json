@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\PlataformaEducativa.csproj": {}
+    "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\PlataformaEducativa.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\PlataformaEducativa.csproj": {
+    "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\PlataformaEducativa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\PlataformaEducativa.csproj",
+        "projectUniqueName": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\PlataformaEducativa.csproj",
         "projectName": "PlataformaEducativa",
-        "projectPath": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\PlataformaEducativa.csproj",
+        "projectPath": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\PlataformaEducativa.csproj",
         "packagesPath": "C:\\Users\\aksse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\obj\\",
+        "outputPath": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,22 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Chart.js": {
+              "target": "Package",
+              "version": "[3.7.1, )"
+            },
+            "DinkToPdf": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            },
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Holidays": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -58,6 +74,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Nager.Date": {
+              "target": "Package",
+              "version": "[1.47.0, )"
+            },
+            "Spire.Presentation": {
+              "target": "Package",
+              "version": "[8.11.1, )"
             }
           },
           "imports": [

@@ -1,0 +1,95 @@
+﻿@using PlataformaEducativa.Models.ModelsView;
+@model List<IniciarCursoView>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<table class="table table-borderless">
+    <tr>
+        <th>
+           Curso
+        </th>
+        <th>
+            Instituto
+        </th>
+        <th>
+            Hora
+        </th>
+        <th>
+            Dias
+        </th>
+        <th>
+            Profesor
+        </th>
+        <th>
+           #Estudiantes
+        </th>
+        <th>
+            Opciones
+        </th>
+    </tr>
+    @foreach(var i in Model)
+    {
+        <tr>
+           <td>
+               @i.NombreCurso
+           </td>
+           <td>
+               @i.Instituto
+           </td>
+           
+           <td>
+              @string.Format($"{@i.Hora.Horas_Iniciar} a {@i.Hora.Horas_Final}")
+           </td>
+           <td>
+                @foreach(var f in i.diaSemanas)
+                {
+                 @f.Dias @string.Format(" ");    
+                }
+                
+           </td>
+           <td>
+              @i.Profesor
+           </td>
+           <td>
+                <a asp-action="List_Estudt_Curso" asp-route-id="@i.IniciarCursoId" asp-controller="Estudiantes">#@i.Estudiantes</a>
+           </td>
+           <td>
+                <a class="btn btn-outline-danger" asp-route-curso="@i.NombreCurso" asp-route-instituto="@i.Instituto" asp-action="Existe" asp-controller="Estudiantes" asp-route-idcurso="@i.CursoId" asp-route-institutoId="@i.InstitutoId" asp-route-iniciarCursoId="@i.IniciarCursoId">
+                   Inscribir 
+                </a>
+                @if(User.IsInRole("Gestor"))
+                {
+                    <a class="btn btn-outline-info" asp-action="AsignarProf" asp-controller="IniciarCurso" asp-route-curso="@i.CursoId" asp-route-iniciarCursoId="@i.IniciarCursoId" asp-route-Instituto="@i.InstitutoId" asp-route-institutoId="@i.InstitutoId">
+                        Prof
+                    </a>
+                }
+                @if(User.IsInRole("Gestor")){
+                    @if (@i.Estudiantes > 2 && !string.IsNullOrEmpty(i.Profesor))
+                    {
+                        <a class="btn btn-outline-success" asp-action="Iniciar" asp-controller="IniciarCurso" asp-route-curso="@i.NombreCurso" asp-route-iniciarCursoId="@i.IniciarCursoId" asp-route-CursoId="@i.CursoId" asp-route-institutoId="@i.InstitutoId" asp-route-instituto="@i.Instituto">
+                            Iniciar
+                        </a>
+
+
+                    }
+                    else
+                    {
+                        <input value="Iniciar" type="button" class="btn btn-outline-secondary" disabled>
+
+                    }
+                    <a asp-action="IniciarEdit" asp-controller="IniciarCurso" asp-route-id="@i.IniciarCursoId" class="btn btn-primary" >
+
+                        Editar Curso
+                    </a>
+                
+                 }
+
+               
+                
+           </td>
+        </tr>
+    }   
+
+</table>

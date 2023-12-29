@@ -1,0 +1,149 @@
+﻿@using PlataformaEducativa.Models.ModelsView;
+@model RegisterView;
+@{
+    ViewData["Title"] = "Registrar";
+}
+
+
+<div class="mx-auto img-ctc" style="width: 250px">
+    <img src="~/img/descarga.png" width="110" />
+   
+</div>
+
+@using (Html.BeginForm("Registrar", "Usuario", FormMethod.Post,new{@class="sombra"}))
+{
+    <h4 style="text-align:center;margin:15px">Registrar</h4>
+
+    <div class="container ms-5 ms-5 ">
+
+
+        <div class=" row row-cols-2 ">
+
+
+            <div class="col">
+                <div asp-validation-summary="ModelOnly"></div>
+
+                <div class="col-sm-7">
+                    @Html.LabelFor(m=>m.Nombre)
+                    @Html.TextBoxFor(m=>m.Nombre,new{type="text",@class="form-control"})
+                    <span id="spanNombre" asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+
+            </div>
+
+
+            <div class="col">
+                <div class="col-sm-7">
+                    @Html.LabelFor(m=>m.Apellido)
+                    @Html.TextBoxFor(m=>m.Apellido,new{type="text",@class="form-control"})
+                    <span id="spanApellido" asp-validation-for="Apellido" class="text-danger"></span>
+                </div>
+            </div>
+
+           
+
+            <div class="col">
+                <div class="col-sm-7">
+                    @Html.LabelFor(m=>m.Correo)
+                    @Html.TextBoxFor(m=>m.Correo,new{type="email",@class="form-control"})
+                    <span id="spanCorreo" asp-validation-for="Correo" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col-sm-7">
+                    @Html.LabelFor(m=>m.cedula)
+                    @Html.TextBoxFor(m=>m.cedula,new{@class="form-control"})
+                    <span  id="spanCedula" asp-validation-for="cedula" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col-sm-7">
+                    @Html.LabelFor(m=>m.FechaNacimiento)
+                    @Html.TextBoxFor(m=>m.FechaNacimiento,new{type="date",@class="form-control"})
+                    <span id="spanFechaNacimiento" asp-validation-for="FechaNacimiento" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col-sm-7">
+                    @Html.LabelFor(m=>m.Telefono)
+                    @Html.TextBoxFor(m=>m.Telefono,new{type="tel",@class="form-control"})
+                    <span id="spanTelefono" asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col-sm-7">
+                    @Html.LabelFor(m=>m.Direccion,new{@class="form-label"})
+                    @Html.TextAreaFor(m=>m.Direccion,new{type="text",@class="form-control col-md-6"  ,maxlength="100"})
+
+                    <span asp-validation-for="Direccion" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="col-sm-7">
+                   <p>Genero</p>
+
+                   <label for=>Masculino</label>
+                   <input type="radio" asp-for="Genero" value='M' >
+                   <label>Femenino</label>
+                   <input type="radio" id="Genero2" asp-for="Genero" value='F'>
+                   <p>
+                   <span class="text-danger" asp-validation-for="Genero" id="spangenero"></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col-sm-7">
+                    <label>Roles</label>
+                    <select class="form-select" multiple aria-label="multiple select example" size="4" asp-for="Roles">
+                        @foreach (var i in Model.Roles)
+                        {
+                            <option>@i.RoleName</option>
+                        }
+                    </select>
+                    <span id="spanExiste"></span>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col-sm-7">
+                    <label>Municipio</label>
+                    <select asp-for="Municipios" class="form-select" multiple aria-label="multiple select example" size="4" id="Municipio">
+                        @foreach (var i in Model.Municipios)
+                        {
+                            <option>@i.MunicipioName</option>
+                        }
+                    </select>
+
+
+                </div>
+
+            </div>
+            <div id="Instituciones" class="col-sm-10">
+                <label>Centros</label>
+                <select name="InstitucionesId" class="form-select" size="4" id="selectInstituciones">
+
+                </select>
+            </div>
+
+
+        </div>
+
+
+        <div class="mx-auto" style="width: 250px;">
+            <div class="me-5">
+                <input class="btn btn-success my-4 " type="submit" value="Crear" id="Crear">
+            </div>
+        </div>
+
+    </div>
+
+}
+<script src="/js/Users.js">
+   
+</script>

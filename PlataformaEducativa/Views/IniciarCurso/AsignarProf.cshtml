@@ -1,0 +1,44 @@
+﻿@model PlataformaEducativa.Models.ModelsView.ModelsAsignar
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="Menu-P">
+<form method="post" asp-action="AsignarProf" asp-controller="IniciarCurso" class="form-p">
+    <input type="hidden" readonly name="Curso" asp-for="CursoId" class="form-control"  />
+    <input type="text" readonly asp-for="CursoName" class="form-control" />
+    <input type="hidden"  asp-for="Instituto" readonly  class="form-control" />
+    <input type="text" asp-for="InstitutoNombre" readonly class="form-control" />
+    <input type="hidden" asp-for="IniciarCursoId" />
+   <div>
+            <select name="Usuario" class="form-select form-select-lg mb-3" id="select-P">
+           <option value="0" > Seleciones A un Facilitador</option>
+            @foreach(var i in Model.Usuarios)
+            {
+                <option value="@i.UsuarioId">
+                    @i.Nombre
+                </option>
+            }
+        </select>
+   </div>
+   <input type="submit" value="Asignar"  disabled id="buttonAs"/>
+</form>
+
+ <div style="width:50%;background:#0d2847;display:flex;justify-content:space-between;flex-wrap:wrap;">
+    <div class="foto">
+        <img src="" class="imag" id="imag" />
+    </div>
+    <div class="info">
+      <p id="correo">Correo:</p>
+      <p id="telefono">Telefono:</p>
+      <p id="sexo">Sexo:</p>
+    </div>
+    <div class="info-n">
+        <strong id="nombre"></strong>
+    </div>
+</div>
+</div>
+
+<script src="~/js/asignarcursoprof.js"></script>

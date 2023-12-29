@@ -1,0 +1,119 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<ul class="sidebar-list">
+    <!-- -------- Non Dropdown List Item ------- -->
+    <li>
+        <div class="title">
+            <a href="#" class="link">
+                <i class='bx bx-grid-alt'></i>
+                <span class="name">Dashboard</span>
+            </a>
+            <!-- <i class='bx bxs-chevron-down'></i> -->
+        </div>
+        <div class="submenu">
+            <a href="#" class="link submenu-title">Dashboard</a>
+            <!-- submenu links here  -->
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <div class="title">
+            <a href="#" class="link">
+                <i class="fa-solid fa-user"></i>
+                <span class="name">Estudiantes</span>
+            </a>
+            <i class='bx bxs-chevron-down'></i>
+        </div>
+        <div class="submenu">
+            <a href="#" class="link submenu-title">Estudiantes</a>
+            <a asp-action="BucardorEstudiantes" asp-controller="Estudiantes"> Estudiantes</a>
+
+        </div>
+    </li>
+    <!-- -------- Dropdown List Item ------- -->
+    <li class="dropdown">
+        <div class="title">
+            <a href="#" class="link">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span class="name">Cursos</span>
+            </a>
+            <i class='bx bxs-chevron-down'></i>
+
+        </div>
+        <div class="submenu">
+            <a href="#" class="link submenu-title">Cursos</a>
+            <a asp-action="Index" asp-controller="Cursos" class="link">Lista de Curso</a>
+            <a asp-action="Index" asp-controller="IniciarCurso" class="link">Lista de Cursos Iniciado</a>
+            <a asp-action="CursosActivos" asp-controller="IniciarCurso" class="link">Tus Cursos</a>
+            <a asp-action="CursosFinalizado" asp-controller="IniciarCurso" class="link"></a>
+        </div>
+
+    </li>
+  
+
+
+
+    <li>
+        <div class="title">
+            <a href="#" class="link">
+                <i class='bx bxs-cog'></i>
+                <span class="name">Ajustes</span>
+            </a>
+            <!-- <i class='bx bxs-chevron-down'></i> -->
+        </div>
+        <div class="submenu">
+            <a href="#" class="link submenu-title">Ajuste</a>
+            <!-- submenu links here  -->
+        </div>
+    </li>
+
+    <!-- -------- Non Dropdown List Item ------- -->
+    <div class="usuario">
+    <li>
+        <div class="title">
+            <a href="/Perfil/Perfil?Id=@User.FindFirst("ID").Value" class="link">
+                    @{
+                        string ruta = User.FindFirst("Foto").Value == "no" ? "descargar.png" : User.FindFirst("Foto").Value;
+                    }
+                    @{
+                        if (User.FindFirst("Foto").Value != "no")
+                        {
+                        <i><img class="UserImagen" src="/img/@User.FindFirst("Foto").Value" alt=""></i>
+                        }
+                        else
+                        {
+                        <i><img class="UserImagen" src="/img/descarga.png" alt=""></i>
+                        }
+
+
+                    }
+
+                <div class="perfil">
+
+                    <span class="nombre1">@User.Identity.Name</span>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                        <span class="nombre2">@User.FindFirst("Role").Value</span>
+                        }
+
+
+
+                </div>
+                <a asp-action="Cerrar" asp-controller="Usuario">
+                    <i class="bx bx-log-out" id="log_out">
+
+                    </i>
+                </a>
+
+            </a>
+
+        </div>
+
+
+
+    </li>
+    </div>

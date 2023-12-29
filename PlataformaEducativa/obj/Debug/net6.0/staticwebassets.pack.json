@@ -1,247 +1,367 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PlataformaEducativa.bundle.scp.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PlataformaEducativa.bundle.scp.css",
       "PackagePath": "staticwebassets\\PlataformaEducativa.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\css\\Registro.css",
+      "PackagePath": "staticwebassets\\css\\Registro.css"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\css\\intituto.css",
+      "PackagePath": "staticwebassets\\css\\intituto.css"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\032f5bb6-3808-4564-ac1f-c893cdded5ba.png",
+      "PackagePath": "staticwebassets\\img\\032f5bb6-3808-4564-ac1f-c893cdded5ba.png"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\03ee39ba-9701-42c8-867c-a36a769ce400.jpeg",
+      "PackagePath": "staticwebassets\\img\\03ee39ba-9701-42c8-867c-a36a769ce400.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\0cf62166-ed90-493b-a88c-c53759d36064.jpg",
+      "PackagePath": "staticwebassets\\img\\0cf62166-ed90-493b-a88c-c53759d36064.jpg"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\43c4243c-028e-47e1-93be-5cb4e4b6eb27.jpg",
+      "PackagePath": "staticwebassets\\img\\43c4243c-028e-47e1-93be-5cb4e4b6eb27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\594155876.gif",
+      "PackagePath": "staticwebassets\\img\\594155876.gif"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\5aeb413c-de30-4e0d-88ee-cc0d1bcbf171.png",
+      "PackagePath": "staticwebassets\\img\\5aeb413c-de30-4e0d-88ee-cc0d1bcbf171.png"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\85924980-00a2-4b58-844a-8ddc300bb740.jpg",
+      "PackagePath": "staticwebassets\\img\\85924980-00a2-4b58-844a-8ddc300bb740.jpg"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\BuscaRegis.png",
+      "PackagePath": "staticwebassets\\img\\BuscaRegis.png"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\aed80a69-7712-4410-b345-190da512e724.png",
+      "PackagePath": "staticwebassets\\img\\aed80a69-7712-4410-b345-190da512e724.png"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\buscar.png",
+      "PackagePath": "staticwebassets\\img\\buscar.png"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\descarga.png",
+      "PackagePath": "staticwebassets\\img\\descarga.png"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\img\\imgUser\\user.jpeg",
+      "PackagePath": "staticwebassets\\img\\imgUser\\user.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\AsignarCursoProf.js",
+      "PackagePath": "staticwebassets\\js\\AsignarCursoProf.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\BuscarEstudiantes.js",
+      "PackagePath": "staticwebassets\\js\\BuscarEstudiantes.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\BuscarProfesor.js",
+      "PackagePath": "staticwebassets\\js\\BuscarProfesor.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\BuscarUsuario_S.js",
+      "PackagePath": "staticwebassets\\js\\BuscarUsuario_S.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\EditIniciarCurso.js",
+      "PackagePath": "staticwebassets\\js\\EditIniciarCurso.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\GuardarPerfil.js",
+      "PackagePath": "staticwebassets\\js\\GuardarPerfil.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\NotaEstudiantes.js",
+      "PackagePath": "staticwebassets\\js\\NotaEstudiantes.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\UpdateProfect.js",
+      "PackagePath": "staticwebassets\\js\\UpdateProfect.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\Users.js",
+      "PackagePath": "staticwebassets\\js\\Users.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\Validar.js",
+      "PackagePath": "staticwebassets\\js\\Validar.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\ValidarCedula.js",
+      "PackagePath": "staticwebassets\\js\\ValidarCedula.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\asignarMateria.js",
+      "PackagePath": "staticwebassets\\js\\asignarMateria.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\js\\validacionHora.js",
+      "PackagePath": "staticwebassets\\js\\validacionHora.js"
+    },
+    {
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\aksse\\source\\repos\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\aksse\\OneDrive\\Escritorio\\PlataformaEducativa\\PlataformaEducativa\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

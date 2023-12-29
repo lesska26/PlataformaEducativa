@@ -1,0 +1,33 @@
+﻿@model PlataformaEducativa.Models.Hora
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Hora</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" id="formulario" class="formHora">
+
+
+            <label for="Horas_Iniciar">Hora de inicio de la clase:</label>
+            <input type="time" id="meeting-start" name="Horas_Iniciar" min="07:00" max="22:00" required>
+
+            <label for="Horas_Final">Hora de terminación de la clase:</label>
+            <input type="time" id="meeting-end" name="Horas_Final" min="07:00" max="22:00" required>
+            <input type="submit" value="Enviar">
+               
+            
+        </form>
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/js/validacionHora.js"></script>

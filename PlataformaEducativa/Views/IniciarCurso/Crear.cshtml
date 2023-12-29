@@ -1,0 +1,107 @@
+﻿@model PlataformaEducativa.Models.ModelsView.IniciarCursoView
+
+@{
+    ViewData["Title"] = "Crear";
+}
+<link href="~/css/intituto.css" rel="stylesheet" />
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Iniciar Curso</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Crear" id="formulario">
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+
+                            <label class="form-label" asp-for="Cursos"></label>
+                            <select name="NombreCurso" class="form-select" id="NombreCurso">
+                                <option selected value="0">Elije un Curso</option>
+                                @foreach (var i in Model.Cursos)
+                                {
+                                    <option>@i.CursosName</option>
+                                }
+                            </select>
+                            <span asp-validation-for="NombreCurso" id="spanNombreCurso" class="text-danger"></span>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="control-label" asp-for="Instituciones"></label>
+                            <select class="form-select" asp-for="Instituto" id="Instituto">
+
+                                @foreach (var i in Model.Instituciones)
+                                {
+                                    <option selected>
+                                        @i.Nombre
+                                    </option>
+                                }
+                            </select>
+                            <span asp-validation-for="Instituto" id="spanInstituto" class="text-danger"></span>
+                        </div>
+
+
+
+
+
+                        <div>
+                            <label class="control-label" asp-for="Horas"></label>
+                            <select class="form-select" asp-for="Horas">
+                                <option selected value="0">Elije un Horario</option>
+                                @foreach (var i in Model.HorlaLista)
+                                {
+                                    <option value="@i.HoraId">
+                                        @string.Format($"{@i.Horas_Iniciar} a {@i.Horas_Final}")
+                                    </option>
+                                }
+                            </select>
+                            <span asp-validation-for="Horas" id="spanHoras" class="text-danger"></span>
+                        </div>
+
+
+
+                        <div class="form-group" id="cajaDia">
+                            <div>
+                                <label class="control-label py-2">Dia de las Semana</labe>
+                            </div>
+                            <div>
+
+
+                                @foreach (var i in Model.diaSemanas)
+                                {
+                                    <label class="label-control">@i.Dias[0]</label>
+
+                                    <input type="checkbox" name="Semana" id="Semana" value="@i.DiaSemanaId">
+
+
+                                }
+                                <span id="DiaValidar" class="text-danger"></span>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" id="Crear" />
+                        </div>
+                        <a asp-action="Index">Back to List</a>
+
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="~/js/Validar.js"></script>
+

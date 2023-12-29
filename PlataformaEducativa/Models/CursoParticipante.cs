@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PlataformaEducativa.Models
 {
@@ -10,7 +11,16 @@ namespace PlataformaEducativa.Models
           
         public int EstudiantesId { get; set; }
 
+        [ForeignKey("IniciarCursoId")]
+        public IniciarCurso IniciarCurso { get; set; }
 
+        public int IniciarCursoId { get; set; }
+
+        public char?Status { get; set; }
+        [NotMapped]
+        public virtual string Nombre { get; set; }
+
+       
 
     }
 }

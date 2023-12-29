@@ -1,0 +1,52 @@
+﻿@model Usuario;
+
+@*
+*@
+@{
+}
+
+
+    <div class="divImg">
+    @{
+        string url = Model.Foto == null ? "descarga.png" : Model.Foto;
+    }
+    <img src="~/img/@url" id="previewImage" alt="Vista previa de la imagen" />
+    
+    </div>
+    <div class="divInputFile">
+
+    <input type="file" style="display:none" id="inputFile" accept="image/*" onchange="mostrarImagen()" />
+    <label for="inputFile">subir imagen</label>
+    </div>
+<h2 style="text-align:center">Datos Personales</h2>
+  <form class="formEstilo" >
+     <input id="Id" type="hidden" value="@User.FindFirst("ID").Value" />
+    <div>
+        <label class="labelP">
+            Nombre
+        </label>
+        <input class="form-control" id="Nombre" asp-for="Nombre" required type="text" />
+        <span id="spanNombre" class="text-danger" style="display:none">coloque un Nombre Valido</span>
+    </div>
+    <div>
+        <label class="labelP">Apellido</label>
+        <input id="Apellido" class="form-control" asp-for="Apellido" required type="text" />
+        <span id="spanApellido" class="text-danger" style="display:none">coloque un Apellido Valido</span>
+    </div>
+    <div>
+        <label class="labelP">Password</label>
+        <input id="password" class="form-control" type="text" asp-for="Password" required />
+    </div>
+    <div>
+        <label class="labelP">Correo</label>
+        <input id="Correo" class="form-control" type="email" asp-for="Correo" required />
+        <span id="spanCorreo" class="text-danger" style="display:none">coloque un Correo Valido</span>
+    </div>
+    <div >
+        <input id="btnGuardar" value="Guardar" type="button" class="btn btn-success" />
+    </div>
+  </form>  
+</div>
+
+
+<script src="~/js/guardarperfil.js"></script>
